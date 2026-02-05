@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_leaderboard_profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp" tools:ignore="PxUsage"
+            android:gravity="center_horizontal"
+            android:background="@drawable/gradient_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="6dp" tools:ignore="PxUsage"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/arrow_left"
+                    android:contentDescription="Back"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <TextView
+                    android:id="@+id/headingUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏅 Rohan's Profile"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/profile"
+                        android:elevation="4dp"/>
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤 Rohan Jadhav"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/userRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏆 Rank: #1"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:id="@+id/overallProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📈 Overall Progress: 92%"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="3dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/shareProfileBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share Profile"
+                        android:textColor="@color/black"
+                        app:icon="@drawable/share"
+                        app:iconGravity="end"
+                        app:iconPadding="6dp"
+                        android:textSize="13sp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp"
+                        android:backgroundTint="@android:color/transparent"
+                        app:iconTint="@null"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginTop="14dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="7dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/achievementsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎖️ Achievements"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="7dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/fire"
+                            android:contentDescription="🔥 Streak"
+                            android:layout_margin="7dp"/>
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/topper"
+                            android:contentDescription="🥇 Topper"
+                            android:layout_margin="7dp"/>
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/book"
+                            android:contentDescription="📘 10 Topics"
+                            android:layout_margin="7dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Topic Progress Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚 Topic-wise Progress"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- RecyclerView for Topics -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTopicProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+
+            <TextView
+                android:id="@+id/followMeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📲 Follow Me"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="14dp">
+
+                <ImageView
+                    android:id="@+id/facebookIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/facebook"
+                    android:layout_marginEnd="14dp"
+                    android:contentDescription="Facebook"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/instagramIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/instagram"
+                    android:layout_marginEnd="14dp"
+                    android:contentDescription="Instagram"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/twitterIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/twitter"
+                    android:contentDescription="Twitter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

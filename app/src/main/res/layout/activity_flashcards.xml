@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flashcards_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".FlashcardsActivity">
+
+  <!-- Loading indicator -->
+  <ProgressBar
+      android:id="@+id/loadingIndicator"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:visibility="gone"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Swipeable Flashcards -->
+  <androidx.viewpager2.widget.ViewPager2
+      android:id="@+id/viewPagerFlashcards"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:clipToPadding="false"
+      android:paddingStart="32dp"
+      android:paddingEnd="32dp"
+      android:clipChildren="false"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/layoutBottom"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Bottom Section: Progress + Buttons -->
+  <LinearLayout
+      android:id="@+id/layoutBottom"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp"
+      android:background="@android:color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Progress indicator -->
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card 1 of 10"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_gravity="center"/>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:weightSum="3">
+
+      <Button
+          android:id="@+id/btnKnown"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Known" />
+
+      <Button
+          android:id="@+id/btnUnknown"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_weight="1"
+          android:text="Unknown" />
+
+      <Button
+          android:id="@+id/btnReview"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Review Later" />
+    </LinearLayout>
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

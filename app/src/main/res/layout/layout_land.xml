@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/left_icon"
+        android:contentDescription="Back Button"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Topic Selection -->
+    <Spinner
+        android:id="@+id/spinnerTopics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Video Container -->
+    <FrameLayout
+        android:id="@+id/videoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Video Player -->
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="260sp"
+            android:background="@android:color/black"
+            app:resize_mode="fill"
+            app:show_buffering="when_playing"
+            app:use_controller="true" />
+
+        <!-- Full-Screen Button (Overlay) -->
+        <ImageView
+            android:id="@+id/btnFullScreen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/full_screen_icon"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="10dp"
+            android:padding="8dp"
+            android:contentDescription="Full Screen"/>
+    </FrameLayout>
+
+    <!-- Lesson Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lesson Title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <!-- Lesson Content -->
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lesson content will appear here."
+        android:textSize="16sp"
+        android:paddingTop="8dp"/>
+
+    <!-- Code Example -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvCodeExample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="print('Hello, World!')"
+            android:textSize="16sp"
+            android:background="@color/black"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:fontFamily="monospace"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Quiz Button -->
+    <Button
+        android:id="@+id/btnTakeQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Quiz"
+        android:backgroundTint="@color/green_color"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

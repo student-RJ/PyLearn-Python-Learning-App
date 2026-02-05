@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:padding="16dp">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<!-- Toolbar with Back Button and Title -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/purple_700"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:elevation="4dp">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/left_icon"
+    android:contentDescription="Back"
+    app:tint="@android:color/white"
+    android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Contact Us"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+</LinearLayout>
+
+<!-- Support Options Section -->
+<TextView
+    android:layout_marginTop="24dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Get Support"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/black"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:divider="?android:attr/dividerHorizontal"
+    android:showDividers="middle">
+
+    <!-- Email Support -->
+    <LinearLayout
+        android:id="@+id/email_support"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@drawable/white_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/email_icon"
+            android:contentDescription="Email Support Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Email Support"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Call Support -->
+    <LinearLayout
+        android:id="@+id/call_support"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@drawable/white_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="12dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/call_supposrt_us_icon"
+            android:contentDescription="Call Support Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Call Support"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- WhatsApp Support -->
+    <LinearLayout
+        android:id="@+id/whatsapp_support"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@drawable/white_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="12dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/whatsaap_icon"
+            android:contentDescription="WhatsApp Support Icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="WhatsApp Chat"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- Telegram Support -->
+    <LinearLayout
+        android:id="@+id/telegram_support"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@drawable/white_box"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="12dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/telegram"
+            android:contentDescription="Telegram Support Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Telegram Support"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>
+
+<!-- FAQ Section -->
+<TextView
+    android:id="@+id/faq_child"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textColor="@color/black"
+    android:textSize="15sp"
+    android:visibility="gone" />
+
+<ExpandableListView
+    android:id="@+id/faq_expandable_list"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:groupIndicator="@null"
+    android:dividerHeight="1dp"
+    android:layout_marginTop="8dp" />
+
+<!-- Support Ticket Form -->
+<TextView
+    android:layout_marginTop="32dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit a Support Ticket"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/black" />
+
+<EditText
+    android:id="@+id/ticket_subject"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Subject"
+    android:inputType="text"
+    android:layout_marginTop="12dp"
+    android:padding="12dp"
+    android:background="@drawable/rounded_edittext"
+    android:textColor="@color/black"/>
+
+<EditText
+    android:id="@+id/ticket_message"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:hint="Describe your issue"
+    android:inputType="textMultiLine"
+    android:gravity="top"
+    android:layout_marginTop="12dp"
+    android:padding="12dp"
+    android:background="@drawable/rounded_edittext"
+    android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/attach_screenshot_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach Screenshot"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/file"
+    android:drawablePadding="8dp" />
+
+    <Button
+        android:id="@+id/submit_ticket_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Submit Ticket"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/purple_700"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/ic_send"
+    android:drawablePadding="8dp" />
+
+
+</LinearLayout>
+    </ScrollView>

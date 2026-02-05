@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/multiple_choice_bg">
+
+    <RadioButton
+        android:id="@+id/radio_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Option Text"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:background="@drawable/multiple_choice_option_background"
+        android:buttonTint="@color/primary_color" />
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colorful_gradient_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Enhanced Header with Back Button and Creative Design -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/header_gradient_start">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@drawable/header_creative_gradient">
+
+                <!-- Back Button Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        app:icon="@drawable/ic_arrow_back_white"
+                        app:iconSize="24dp"
+                        app:iconTint="@android:color/white"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="@color/white_semi_transparent"
+                        app:rippleColor="@color/white_ripple"
+                        style="@style/Widget.Material3.Button.Icon" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <!-- Settings/Menu Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/menu_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        app:icon="@drawable/ic_more_vert"
+                        app:iconSize="24dp"
+                        app:iconTint="@android:color/white"
+                        app:cornerRadius="24dp"
+                        app:backgroundTint="@color/white_semi_transparent"
+                        style="@style/Widget.Material3.Button.Icon" />
+
+                </LinearLayout>
+
+                <!-- Title Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🐍"
+                        android:textSize="32sp"
+                        android:layout_marginRight="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Python Daily"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:fontFamily="sans-serif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Challenge"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/white_80"
+                            android:fontFamily="sans-serif" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Score Section with Animation -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/score_badge_background"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_star_filled"
+                        android:layout_marginRight="8dp"
+                        app:tint="@color/gold_color" />
+
+                    <TextView
+                        android:id="@+id/score_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Score: 0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 🏆"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Creative Loading Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/loading_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/loading_card_bg"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:gravity="center">
+
+                <!-- Animated Loading Progress -->
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/loading_progress"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="20dp"
+                    app:indicatorColor="@color/primary_color"
+                    app:trackColor="@color/progress_track"
+                    app:trackThickness="6dp"
+                    app:indicatorSize="64dp"
+                     />
+
+                <!-- Loading Animation Icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖"
+                        android:textSize="24sp"
+                        android:layout_marginRight="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡"
+                        android:textSize="20sp"
+                        android:layout_marginRight="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🧠"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/loading_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🚀 Gemini AI is crafting personalized challenges just for you..."
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    android:lineSpacingExtra="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✨ This might take a moment ✨"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Enhanced Challenge Content Card -->
+        <!-- Enhanced Challenge Content Card with better layout handling -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/challenge_content_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Challenge Header with wrapping text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/challenge_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:text="💡"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/challenge_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Challenge Loading..."
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:maxLines="3"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <!-- Improved Challenge Badges with proper wrapping -->
+                <!-- Replace the badges LinearLayout with this improved version -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/challenge_topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/topic_badge"
+                                android:drawableLeft="@drawable/ic_topic"
+                                android:drawablePadding="4dp"
+                                android:padding="8dp"
+                                android:text="Python Basics"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:id="@+id/challenge_difficulty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/difficulty_badge"
+                                android:drawableLeft="@drawable/ic_level"
+                                android:drawablePadding="4dp"
+                                android:padding="8dp"
+                                android:text="Beginner"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+
+                            <TextView
+                                android:id="@+id/challenge_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/type_badge"
+                                android:drawableLeft="@drawable/ic_code_type"
+                                android:drawablePadding="4dp"
+                                android:padding="8dp"
+                                android:text="Coding"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:maxLines="1"
+                                android:ellipsize="end" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Challenge Description with proper scrolling -->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical">
+
+                    <TextView
+                        android:id="@+id/challenge_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Write a Python function that solves the given problem..."
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+                </ScrollView>
+
+                <!-- Improved Multiple Choice Questions Container with visible radio buttons -->
+                <!-- Improved Multiple Choice Container with better radio button visibility -->
+                <LinearLayout
+                    android:id="@+id/multiple_choice_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="🤔 Choose the correct answer:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/multiple_choice_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- Improved True/False Questions Container with visual feedback -->
+                <LinearLayout
+                    android:id="@+id/true_false_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="✅❌ True or False?"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/true_button"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:text="✅ TRUE"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/true_button_bg"
+                            app:cornerRadius="16dp"
+                            android:stateListAnimator="@null"
+                            android:backgroundTintMode="multiply"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/false_button"
+                            style="@style/Widget.Material3.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:text="❌ FALSE"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/false_button_bg"
+                            app:cornerRadius="16dp"
+                            android:stateListAnimator="@null"
+                            android:backgroundTintMode="multiply"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Fill in the Blank Container -->
+                <LinearLayout
+                    android:id="@+id/fill_blank_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="✏️ Fill in the blank:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/primary_color"
+                        app:hintTextColor="@color/primary_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fill_blank_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter your answer..."
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Code Challenge Container -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/code_challenge_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/code_bg_dark"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Code Header with Actions -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/red_700"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="💻 Write Python Code"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <!-- Action Buttons -->
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/run_code_btn"
+                                style="@style/Widget.Material3.Button.UnelevatedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="8dp"
+                                android:text="▶ Run"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/run_button_bg"
+                                app:cornerRadius="16dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/copy_code_btn"
+                                style="@style/Widget.Material3.Button.UnelevatedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="8dp"
+                                android:text="📋"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/copy_button_bg"
+                                app:cornerRadius="16dp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/clear_code_btn"
+                                style="@style/Widget.Material3.Button.UnelevatedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:text="🗑️"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/clear_button_bg"
+                                app:cornerRadius="16dp" />
+
+                        </LinearLayout>
+
+                        <!-- Large Code Input Area -->
+                        <EditText
+                            android:id="@+id/code_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@color/code_bg_dark"
+                            android:fontFamily="sans-serif"
+                            android:gravity="top|start"
+                            android:hint="# Write your Python code here...\n# Example:\ndef solution():\n    pass"
+                            android:inputType="textMultiLine"
+                            android:lineSpacingExtra="2dp"
+                            android:padding="16dp"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/code_text_color"
+                            android:textColorHint="@color/code_hint_color"
+                            android:textSize="14sp" />
+
+                        <!-- Code Output Section -->
+                        <LinearLayout
+                            android:id="@+id/code_output_section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/yellow"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="🖥️ Output:"
+                                    android:textColor="@color/output_label_color"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/clear_output_btn"
+                                    style="@style/Widget.Material3.Button.UnelevatedButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="24dp"
+                                    android:text="Clear"
+                                    android:textColor="@color/output_label_color"
+                                    android:textSize="10sp"
+                                    app:backgroundTint="@color/clear_output_bg"
+                                    app:cornerRadius="12dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/code_output"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gradient_background"
+                                android:fontFamily="sans-serif"
+                                android:padding="12dp"
+                                android:text="No output yet..."
+                                android:textColor="@color/output_text_color"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Creative Progress Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/progress_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/progress_card_bg"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎯"
+                        android:textSize="24sp"
+                        android:layout_marginRight="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daily Progress"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Challenge 1 of 5"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/progress_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20%"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_color" />
+
+                </LinearLayout>
+
+                <!-- Enhanced Progress Bar -->
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/challenge_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:max="5"
+                    android:progress="1"
+                    app:indicatorColor="@color/primary_color"
+                    app:trackColor="@color/progress_track_light"
+                    app:trackCornerRadius="6dp"
+                    />
+
+                <!-- Progress Steps -->
+                <LinearLayout
+                    android:id="@+id/progress_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🟢"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="⚪"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="⚪"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="⚪"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="⚪"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Submit Answer Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_answer_btn"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="✅ Submit Answer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="32dp"
+            app:icon="@drawable/ic_check"
+            app:iconGravity="start"
+            app:iconSize="24dp"
+            app:backgroundTint="@color/submit_button_bg"
+            style="@style/Widget.Material3.Button"
+            android:visibility="gone" />
+
+        <!-- Enhanced Navigation Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_challenge_btn"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="🚀 Next Challenge"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="32dp"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="end"
+            app:iconSize="24dp"
+            app:backgroundTint="@color/primary_color"
+            style="@style/Widget.Material3.Button"
+            android:visibility="gone" />
+
+        <!-- Enhanced AI Info Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/ai_info_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🤖"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✨"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Powered by Gemini AI"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ai_text_primary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Challenges personalized based on your learning progress and coding style"
+                        android:textSize="12sp"
+                        android:textColor="@color/ai_text_secondary"
+                        android:lineSpacingExtra="2dp"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧠"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

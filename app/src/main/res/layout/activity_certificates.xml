@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_certificate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_certificates_gradient"
+    tools:context=".CertificatesActivity">
+
+    <!-- Custom Toolbar with back icon and heading -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_certificate"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+        android:elevation="6dp"
+        android:contentInsetStart="0dp"
+        android:title="Certificates"
+        android:titleTextColor="@android:color/white"
+        android:navigationIcon="@drawable/arrow_left" />
+
+    <!-- Section Heading -->
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_below="@id/toolbar_certificate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎓 Your Achievements"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOnBackground"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Swipe Refresh & Recycler View -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_below="@id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_certificates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/tv_empty_certificates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No certificates earned yet."
+                android:textColor="#999999"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:fontFamily="sans-serif-medium" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

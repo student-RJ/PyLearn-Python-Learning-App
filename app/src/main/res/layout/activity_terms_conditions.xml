@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header: Back Button + Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:layout_marginBottom="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/arrow_left"
+                android:contentDescription="Back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="📄 Terms and Conditions – PyLearn App"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:paddingStart="12dp" />
+        </LinearLayout>
+
+        <!-- rest of layout remains same -->
+
+
+        <!-- Effective Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effective Date: 01 January 2025\nLast Updated: 01 January 2025"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:paddingBottom="12dp" />
+
+        <!-- Terms and Conditions List -->
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            android:lineSpacingExtra="6dp"
+            android:text=" 1. ✅ *Acceptance of Terms*\nBy using PyLearn, you agree to these Terms and our Privacy Policy.\n
+2. 👤 *User Accounts*\n• Register with accurate details\n• Don’t share your password\n• Don’t use others’ accounts\n
+
+3. 🎯 *Use of the App*\n• For learning only – non-commercial\n• No misuse, hacking, or reverse-engineering\n
+
+4. 🧠 *Content Ownership*\n• All tutorials, videos, quizzes belong to PyLearn\n• Don't copy or reuse without permission\n
+
+5. 📝 *User Content*\n• Feedback can help improve app\n• Your progress remains yours, but we use it to help you learn\n
+
+6. 🔗 *Third-Party Services*\n• We use Firebase, YouTube, Cloudinary, etc.\n• We’re not responsible for their terms or data\n
+
+7. 🔒 *Privacy*\n• We store name, email &amp; quiz progress securely\n• Your info is protected under our Privacy Policy\n
+
+8. ✏️ *Modifications*\n• Terms can be updated anytime\n• Continued use = acceptance of updated terms\n
+
+9. ❌ *Termination*\n• Breaking rules can result in account suspension\n• You may request deletion of your account anytime\n
+
+10. ⚠️ *Disclaimer*\n• We don’t guarantee uninterrupted, bug-free app experience\n• Use app as-is\n
+
+11. 🚫 *Limitation of Liability*\n• We're not liable for indirect or accidental damages while using PyLearn" />
+
+        <!-- Accept Checkbox -->
+        <CheckBox
+            android:id="@+id/checkbox_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I have read and agree to the Terms and Conditions"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:id="@+id/txt_already_accepted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have already accepted the Terms and Conditions."
+            android:textColor="@color/green_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal" />
+
+
+        <!-- Accept Button -->
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accept &amp; Continue"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white" />
+
+        <!-- Contact Info -->
+        <TextView
+            android:id="@+id/contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n📧 Contact Us:\nEmail: sd08xsd11@gmail.com\nPhone: +91-8308669670"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:paddingBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lavender">#8692f7</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="red">#D31958</color>
+
+    <color name="colorPrimary">#6200EE</color> <!-- Main theme color -->
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="light_blue">#ADD8E6</color>  <!-- Light Blue -->
+    <color name="green_color">#4CAF50</color> <!-- Green for correct answers -->
+
+    <!-- Additional Suggestions -->
+    <color name="dark_gray">#333333</color> <!-- For text or backgrounds -->
+    <color name="light_gray">#E0E0E0</color> <!-- Light gray background -->
+    <color name="yellow">#FFC107</color> <!-- For warning or marking review -->
+    <color name="blue">#2196F3</color> <!-- For info elements -->
+    <color name="orange">#FF9800</color> <!-- Another accent color -->
+    <color name="soft_pink">#FF80AB</color> <!-- Aesthetic soft pink -->
+
+    <color name="gray">#817878</color> <!-- Light gray background -->
+
+
+    <color name="progress_green">#4CAF50</color>   <!-- Start (Green) -->
+    <color name="progress_yellow">#FFEB3B</color>  <!-- Midway (Yellow) -->
+    <color name="progress_orange">#FF9800</color>  <!-- Warning (Orange) -->
+    <color name="progress_red">#D32F2F</color>     <!-- End (Red) -->
+
+
+        <!-- Color when the item is selected -->
+        <color name="color_selected">#FF6200EE</color> <!-- Example color (purple) -->
+        <!-- Color when the item is unselected -->
+        <color name="color_unselected">#B6B6B6</color> <!-- Example color (grey) -->
+
+
+    <color name="highlight_color">#FF5733</color> <!-- You can use any color code -->
+    <color name="default_color">#FFFFFF</color>
+
+    <color name="purple_700">#3700B3</color> <!-- Deep purple -->
+
+    <!-- Red Shades -->
+    <color name="red_700">#D32F2F</color> <!-- Dark red -->
+    <color name="red_600">#E53935</color> <!-- Medium red -->
+
+
+    <color name="green_dark">#006400</color>
+
+    <color name="primary_color">#3F51B5</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="background_light">#FAFAFA</color>
+
+    <color name="light_gray_background">#121212</color> <!-- Dark surface color -->
+    <color name="card_stroke">#33FFFFFF</color> <!-- Light stroke for dark theme -->
+    <color name="progress_track">#424242</color> <!-- Darker gray for dark theme -->
+
+    <!-- Add these to your existing colors.xml file -->
+    <color name="light_gray_background1">#FFF5F5F5</color>
+    <color name="card_stroke1">#1E000000</color> <!-- Very light black (12% opacity) -->
+    <color name="progress_track1">#E0E0E0</color>
+
+    <!-- You'll also need these additional colors referenced in the layout -->
+    <color name="primary_color1">#6750A4</color>  <!-- Material Indigo 600 -->
+    <color name="primary_light1">#D0BCFF</color> <!-- Material Indigo 200 -->
+    <color name="primary_text1">#1C1B1F</color> <!-- Almost black for text -->
+    <color name="progress_indicator">#6750A4</color> <!-- Same as primary color -->
+    <color name="white1">#FFFFFFFF</color>
+
+    <!-- Dark green -->\
+
+        <!-- Existing colors -->
+        <color name="purple_200">#BB86FC</color>
+
+        <color name="teal_200">#03DAC5</color>
+        <color name="teal_700">#018786</color>
+
+
+        <!-- Add these -->
+        <color name="blue_700">#1976D2</color> <!-- You can choose your preferred shade -->
+        <color name="orange_700">#F57C00</color>
+    <!-- res/values/colors.xml -->
+    <color name="gold">#FFD700</color>
+
+    <!-- Progress bar colors -->
+    <color name="progress_excellent">#4CAF50</color> <!-- Green -->
+    <color name="progress_good">#8BC34A</color> <!-- Light Green -->
+    <color name="progress_average">#FFC107</color> <!-- Amber -->
+    <color name="progress_poor">#F44336</color> <!-- Red -->
+    <color name="green_500">#4CAF50</color>
+
+
+    <color name="colorPrimaryVariant">#1E88E5</color> <!-- dark blue -->
+    <color name="colorOnBackground">#212121</color> <!-- dark text -->
+
+
+    <color name="purple_100">#E1BEE7</color>
+    <color name="purple_900">#311B92</color>
+    <color name="gold_medal">#FFD700</color>
+    <color name="silver_medal">#C0C0C0</color>
+    <color name="bronze_medal">#CD7F32</color>
+    <color name="gold_border">#FFC107</color>
+    <color name="silver_border">#BDBDBD</color>
+    <color name="bronze_border">#A1887F</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_medium">#666666</color>
+    <color name="text_light">#222222</color>
+    <color name="chip_background_unselected_color">#E0E0E0</color>
+    <color name="chip_text_unselected_color">#333333</color>
+    <color name="chip_background_selected_color">#6200EE</color>
+    <color name="chip_text_selected_color">#FFFFFF</color>
+
+        <color name="blue_vibrant">#2196F3</color>
+        <color name="orange_vibrant">#FF9800</color>
+        <color name="green_vibrant">#4CAF50</color>
+        <color name="purple_vibrant">#673AB7</color>
+        <color name="code_background_dark">#282C34</color>
+        <color name="code_text_white">#F8F8F2</color>
+    <color name="text_on_gradient">#FFFFFF</color>
+    <color name="light_gray_transparent">#80EEEEEE</color>
+    <color name="dark_gray_video_background">#333333</color>
+    <color name="red_vibrant">#F44336</color>
+
+
+        <color name="premium_background_start">#6A11CB</color>
+        <color name="premium_background_end">#2575FC</color>
+        <color name="plan_card_background_selected">#FFD700</color>
+        <color name="plan_card_background_unselected">#FFFFFF</color>
+        <color name="plan_status_color">#FFD700</color>
+<!--        <color name="subscribe_button_color">#FFA500</color>-->
+    <color name="plan_card_background_selected_green">#4CAF50</color> ```
+
+    <color name="subscribe_button_color">#FF9800</color> <!-- Optional: reference if you want -->
+
+
+        <color name="background_gradient_start">#FFC107</color> <color name="background_gradient_end">#FF5722</color>   <color name="card_background_light_blue">#E3F2FD</color> <color name="text_color_primary">#212121</color>        <color name="text_color_secondary">#757575</color>      <color name="progress_bar_color">#4CAF50</color>        <color name="progress_bar_background_color">#E0E0E0</color> <color name="icon_color_dark">#212121</color>           <color name="feature_icon_color_1">#2196F3</color>  <color name="feature_icon_color_2">#F44336</color>  <color name="feature_icon_color_3">#FFEB3B</color>  <color name="feature_icon_color_4">#9C27B0</color>  <color name="feature_text_color">#212121</color>    <color name="fab_background_color">#FF5722</color>
+
+        <color name="bottom_nav_background">#FFFFFF</color>
+        <color name="bottom_nav_selected_item">#6200EE</color>
+        <color name="bottom_nav_unselected_item">#757575</color>
+
+        <color name="drawer_item_selected">#6200EE</color>
+        <color name="drawer_item_unselected">#212121</color>
+
+
+
+
+        <color name="progress_bar_color_natural">#8BC34A</color>
+
+        <color name="feature_icon_natural_1">#7CB342</color>
+        <color name="feature_icon_natural_2">#F4511E</color>
+        <color name="feature_icon_natural_3">#FFB300</color>
+        <color name="feature_icon_natural_4">#673AB7</color>
+        <color name="feature_icon_natural_5">#009688</color>
+        <color name="feature_icon_natural_6">#795548</color>
+        <color name="feature_text_color_faded">#9E9E9E</color>
+
+        <color name="bottom_nav_selected_item_natural">#558B2F</color>
+        <color name="bottom_nav_unselected_item_natural">#9E9E9E</color>
+
+
+        <color name="go_premium_card_bg">#FFF9C4</color>
+        <color name="go_premium_icon_color">#FFB300</color>
+        <color name="go_premium_text_color">#5D4037</color>
+        <color name="go_premium_text_color_secondary">#795548</color>
+
+
+
+    <color name="nav_item_color">#FFFFFF</color>
+    <color name="nav_item_selected_color">#FF9800</color>
+
+
+        <color name="purple_800">#FF2A009C</color>
+    <color name="white_transparent_light">#33FFFFFF</color>
+    <color name="white_transparent_medium">#66FFFFFF</color>
+        <color name="white_transparent">#99FFFFFF</color>
+
+    <color name="natural_color">@android:color/white</color> <!-- or any other color -->
+
+
+
+    <color name="card_background_light">#FFFFFF</color>
+    <color name="score_text_color">#3F51B5</color>
+    <color name="summary_text_color">#616161</color>
+    <color name="button_blue">#2196F3</color>
+    <color name="button_orange">#FF9800</color>
+    <color name="button_purple">#9C27B0</color>
+
+    <color name="card_unattempted">#9E9E9E</color>
+
+        <!-- Custom Colors -->
+        <color name="card_background">#F5F7FA</color>
+        <color name="text_secondary">#757575</color>
+        <color name="message_text">#FFFFFF</color>
+
+        <!-- Card Colors -->
+        <color name="card_correct">#4CAF50</color>
+        <color name="card_incorrect">#F44336</color>
+        <color name="card_time">#2196F3</color>
+        <color name="card_achievements">#FFC107</color>
+        <color name="card_badges">#9C27B0</color>
+
+        <!-- Button Colors -->
+        <color name="button_share">#3F51B5</color>
+        <color name="button_retry">#FF5722</color>
+
+        <!-- Progress Colors -->
+        <color name="progress_color">#4CAF50</color>
+        <color name="progress_bg">#E0E0E0</color>
+        <color name="progress_text">#212121</color>
+
+
+
+        <color name="primary_blue">#4285F4</color>
+        <color name="secondary_green">#34A853</color>
+        <color name="accent_orange">#FBBC05</color>
+        <color name="gold_yellow">#FFD700</color>
+    <color name="start_gradient_color">#8A2BE2</color>
+        <color name="end_gradient_color">#4169E1</color>
+        <color name="card_background_dark_overlay">#33000000</color>
+    <color name="text_on_dark">#FFFFFF</color>
+        <color name="text_on_light">#333333</color>
+
+    <color name="colorPrimaryLight">#BB86FC</color>
+
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <color name="chip_color_1">#4CAF50</color>
+    <color name="chip_color_2">#2196F3</color>
+    <color name="chip_color_3">#FF9800</color>
+    <color name="chip_stroke">#FFFFFF</color>
+
+    <color name="white_70">#B3FFFFFF</color>
+
+    <color name="ai_message_background">#E0F7FA</color> <!-- Light Cyan -->
+    <color name="user_message_background">#C8E6C9</color> <!-- Light Green -->
+    <color name="white_30">#4DFFFFFF</color> <!-- 30% opacity white -->
+    <color name="border_light">#E0E0E0</color> <!-- Light gray border -->
+    <color name="text_primary">#212121</color> <!-- Keep consistent with textPrimary -->
+    <color name="ai_avatar_background">#B2EBF2</color>
+
+    <color name="primary_color_dark">#1976D2</color>
+
+        <color name="user_avatar_background">#BBDEFB</color>
+
+
+        <color name="primary_dark">#388E3C</color>
+        <color name="accent_color">#FF5722</color>
+
+        <!-- Header Colors -->
+        <color name="header_gradient_start">#FF6B6B</color>
+        <color name="header_gradient_end">#4ECDC4</color>
+
+        <!-- Text Colors -->
+
+        <color name="text_hint">#9E9E9E</color>
+
+        <!-- Background Colors -->
+        <color name="loading_card_bg">#FFFFFF</color>
+        <color name="progress_card_bg">#F8F9FA</color>
+        <color name="ai_info_bg">#E8F5E8</color>
+
+        <!-- White Variants -->
+        <color name="white_80">#CCFFFFFF</color>
+        <color name="white_semi_transparent">#66FFFFFF</color>
+        <color name="white_ripple">#33FFFFFF</color>
+
+
+        <color name="progress_track_light">#F0F0F0</color>
+        <color name="gold_color">#FFD700</color>
+
+        <!-- Code Editor Colors -->
+        <color name="code_bg_dark">#2D2D2D</color>
+        <color name="code_header_bg">#1E1E1E</color>
+        <color name="code_text_color">#F8F8F2</color>
+        <color name="code_hint_color">#75715E</color>
+
+        <!-- Output Colors -->
+        <color name="output_bg">#1A1A1A</color>
+        <color name="output_label_color">#A6E22E</color>
+        <color name="output_text_color">#F8F8F2</color>
+
+        <!-- Button Colors -->
+        <color name="run_button_bg">#4CAF50</color>
+        <color name="copy_button_bg">#2196F3</color>
+        <color name="clear_button_bg">#FF5722</color>
+        <color name="clear_output_bg">#666666</color>
+        <color name="submit_button_bg">#4CAF50</color>
+        <color name="true_button_bg">#4CAF50</color>
+        <color name="false_button_bg">#F44336</color>
+
+        <!-- AI Info Colors -->
+        <color name="ai_text_primary">#2E7D32</color>
+        <color name="ai_text_secondary">#4CAF50</color>
+
+        <!-- Challenge Type Colors -->
+        <color name="multiple_choice_bg">#E3F2FD</color>
+        <color name="true_false_bg">#FFF3E0</color>
+        <color name="fill_blank_bg">#F3E5F5</color>
+        <color name="coding_bg">#E8F5E8</color>
+<!--    <color name="radio_button_color">#6200EE</color>-->
+<!--    <color name="radio_button_color">#6200EE</color>  &lt;!&ndash; Purple color for radio buttons &ndash;&gt;-->
+    <color name="radio_stroke_color">#6200EE</color> <!-- Border color when selected -->
+    <color name="radio_selected_bg">#F3E5FF</color>
+    <color name="radio_button_color">#6200EE</color>  <!-- Purple color for radio buttons -->
+    <!-- Light purple background when selected --><!-- Light purple background when selected --><!-- Purple color for radio buttons -->
+</resources>

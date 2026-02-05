@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/code_compiler_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodeCompilerActivity">
+
+    <View
+        android:id="@+id/dynamicBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0F7FA" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent" android:elevation="8dp"
+        app:title="Code Compiler"
+        app:titleTextColor="@color/purple_700" app:navigationIcon="@drawable/arrow_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCodeEditorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code Editor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333" android:layout_marginBottom="8dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/rounded_card_background" android:elevation="6dp" android:padding="8dp"
+                android:clipToPadding="false">
+
+                <TextView
+                    android:id="@+id/lineNumbers"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp"
+                    android:text="1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+                    android:textColor="#9E9E9E" android:textSize="14sp"
+                    android:gravity="top|end"
+                    android:fontFamily="monospace"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <EditText
+                    android:id="@+id/codeEditor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="monospace"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textNoSuggestions|textCapSentences"
+                    android:scrollbars="vertical"
+                    android:overScrollMode="always"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:hint="Start coding here..." android:importantForAutofill="no"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    app:layout_constraintStart_toEndOf="@id/lineNumbers"
+                    app:layout_constraintEnd_toStartOf="@id/errorIcon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/errorIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Error Indicator" android:visibility="gone"
+                    android:src="@drawable/error"
+                    app:tint="@color/red_700"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp" android:layout_marginBottom="20dp"> <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Font Size"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+                <SeekBar
+                    android:id="@+id/fontSizeSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="30"
+                    android:progress="16"
+                    android:layout_marginStart="16dp"
+                    android:thumbTint="@color/purple_500" android:progressTint="@color/purple_200"/> </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"> <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRunCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5" android:text="Run Code"
+                android:textAllCaps="false"
+                android:icon="@drawable/play_icon"
+                app:iconPadding="8dp"
+                android:iconTint="@color/white"
+                app:backgroundTint="@color/purple_500"
+                android:textColor="@android:color/white"
+                app:cornerRadius="12dp" android:elevation="6dp"
+                android:minHeight="56dp" /> <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCopyOutput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Copy"
+                android:textAllCaps="false"
+                android:icon="@drawable/copy_icon"
+                app:iconPadding="8dp"
+                android:iconTint="@color/white"
+                app:backgroundTint="#424242" android:textColor="@android:color/white"
+                app:cornerRadius="12dp"
+                android:elevation="6dp"
+                android:minHeight="56dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:icon="@drawable/claer"
+                    app:iconPadding="8dp"
+                    android:iconTint="@color/white"
+                    app:backgroundTint="@color/red_600"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="12dp"
+                    android:elevation="6dp"
+                    android:minHeight="56dp"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarRunning"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp" android:visibility="gone"
+                android:indeterminate="true"
+                android:layout_marginBottom="16dp"
+                android:indeterminateTint="@color/purple_500"
+                android:backgroundTint="#F3E5F5"/> <TextView
+            android:id="@+id/tvOutputLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Output"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your program output will appear here."
+                android:textSize="16sp"
+                android:textColor="#444444"
+               android:padding="12dp"
+                android:background="@drawable/rounded_output_background"
+                android:minHeight="120dp"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:fontFamily="monospace"/> </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6237833466905647/9845985251"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

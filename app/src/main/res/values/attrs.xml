@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="CircularProgressView">
+        <attr name="progress" format="integer" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="progress_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
+    </declare-styleable>
+</resources>

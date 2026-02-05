@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Add these styles for the navigation drawer -->
+    <style name="ShapeAppearanceOverlay.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="NavItemStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/nav_item_color</item>
+    </style>
+
+    <!-- Theme for the navigation view -->
+    <style name="NavTheme" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="colorSurface">@color/purple_500</item>
+        <item name="colorOnSurface">@android:color/white</item>
+    </style>
+
+    <!-- No action bar theme -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+        <style name="CustomCheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+            <item name="android:buttonTint">@android:color/white</item>
+            <item name="android:textColor">@android:color/white</item>
+            <item name="boxBackgroundColor">@android:color/white</item>
+            <item name="boxCornerRadiusTopStart">12dp</item>
+            <item name="boxCornerRadiusTopEnd">12dp</item>
+            <item name="boxCornerRadiusBottomStart">12dp</item>
+            <item name="boxCornerRadiusBottomEnd">12dp</item>
+        </style>
+
+</resources>

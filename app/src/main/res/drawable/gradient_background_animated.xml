@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/state_on">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#6A11CB"
+                android:endColor="#2575FC"
+                android:type="linear" />
+        </shape>
+    </item>
+    <transition
+        android:fromId="@+id/state_off"
+        android:toId="@+id/state_on">
+        <animation-list>
+            <item android:duration="1500">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="45"
+                        android:startColor="#6A11CB"
+                        android:endColor="#2575FC"
+                        android:type="linear" />
+                </shape>
+            </item>
+            <item android:duration="1500">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="45"
+                        android:startColor="#2575FC"
+                        android:endColor="#6A11CB"
+                        android:type="linear" />
+                </shape>
+            </item>
+        </animation-list>
+    </transition>
+</animated-selector>

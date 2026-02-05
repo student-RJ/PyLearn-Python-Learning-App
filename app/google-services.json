@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539984818390",
+    "firebase_url": "https://python1-32390-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "python1-32390",
+    "storage_bucket": "python1-32390.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539984818390:android:594b3940c5b1fd99f0d977",
+        "android_client_info": {
+          "package_name": "com.example.python1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539984818390-nnk01b2fhg1sqslibvqk7v6bg721ltl3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.python1",
+            "certificate_hash": "e6ba31df55dc09f344a511097fc173f4a1205213"
+          }
+        },
+        {
+          "client_id": "539984818390-g9p1gsgammat0nds6a0egfikl1be2avb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiMQ7MyPf-kuQXywnx4dtl2DfQrRarFeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539984818390-g9p1gsgammat0nds6a0egfikl1be2avb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

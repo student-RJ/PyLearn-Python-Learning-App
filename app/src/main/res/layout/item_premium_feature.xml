@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/iv_feature_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/features"
+        android:contentDescription="Feature Icon"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_feature_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:text="Unlock All Quiz Topics" />
+
+</LinearLayout>

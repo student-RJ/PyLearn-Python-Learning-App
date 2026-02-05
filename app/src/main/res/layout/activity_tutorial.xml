@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/gradient_background1"> <LinearLayout
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/left_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            app:tint="@color/text_on_gradient" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Python Tutorial"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_gradient"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/app_icon"
+            android:contentDescription="Python Logo"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Your Lesson"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingBottom="8dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <Spinner
+                android:id="@+id/spinnerTopics"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/spinner_white_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:overlapAnchor="false"
+                android:dropDownVerticalOffset="48dp"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/purple_vibrant">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvOverallProgressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Learning Progress"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:progressTint="@color/orange_vibrant"
+                    android:progressBackgroundTint="@color/light_gray_transparent"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/custom_progress_bar_orange"
+                    tools:progress="50"/>
+
+                <TextView
+                    android:id="@+id/tvOverallProgressPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0% Completed"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginStart="12dp"
+                    tools:text="50% Completed"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/videoCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/dark_gray_video_background">
+
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:resize_mode="fit"
+                app:use_controller="true"
+                app:show_buffering="when_playing"
+                app:surface_type="surface_view"
+                />
+
+            <ImageView
+                android:id="@+id/btnFullScreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_button_background1"
+                android:contentDescription="@string/full_screen"
+                android:padding="8dp"
+                android:src="@drawable/full_screen_icon"
+                app:tint="@android:color/white"/>
+
+            <ProgressBar
+                android:id="@+id/videoLoadingSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/green_vibrant"
+                android:visibility="gone" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Understanding Python Basics: Variables and Data Types"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingBottom="12dp"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Python basics cover fundamental concepts like variables, data types (integers, floats, strings, booleans), and basic operations. Understanding these building blocks is crucial for writing any Python program. Variables act as containers for storing data values. Python is dynamically typed, meaning you don't need to declare the variable's type when you assign a value to it."
+        android:textSize="17sp"
+        android:textColor="@color/dark_gray"
+        android:lineSpacingExtra="5dp"
+        android:paddingBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:justificationMode="inter_word"
+        tools:targetApi="o"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:backgroundTint="@color/code_background_dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Code Example:"
+                android:textColor="@color/light_gray"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCodeExample"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="age = 30\nname = 'Alice'\nis_student = True\n\nprint(f'Name: {name}, Age: {age}, Student: {is_student}')"
+                    android:textSize="16sp"
+                    android:textColor="@color/code_text_white"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"/>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:id="@+id/navigationButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btnPreviousLesson"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="Previous"
+            android:textColor="@color/red_vibrant"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@drawable/btn_rounded_outline_red"
+            android:elevation="0dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btnNextLesson"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/green_vibrant" android:background="@drawable/btn_rounded"
+            android:elevation="4dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnTakeQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Test Your Knowledge: Take Quiz!"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue_vibrant" android:layout_marginBottom="24dp"
+        android:background="@drawable/btn_rounded_quiz"
+        android:elevation="8dp"
+        android:stateListAnimator="@animator/button_press_animation"
+        tools:targetApi="lollipop"/>
+</LinearLayout>
+</ScrollView>

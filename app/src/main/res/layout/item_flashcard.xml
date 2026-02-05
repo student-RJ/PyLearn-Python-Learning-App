@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_margin="16dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <!-- Speaker Icon (Text-to-Speech) -->
+        <ImageView
+            android:id="@+id/speakerIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:src="@android:drawable/ic_lock_silent_mode_off"
+            android:contentDescription="Play sound"
+            android:tint="@color/black"/>
+
+        <!-- Star/Favorite Icon -->
+        <ImageView
+            android:id="@+id/starIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/btn_star_big_off"
+            android:contentDescription="Favorite"
+            android:tint="@color/black" />
+
+        <!-- Flashcard Word -->
+        <TextView
+            android:id="@+id/flashcardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Bug"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

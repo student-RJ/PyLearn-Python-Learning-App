@@ -1,0 +1,5 @@
+<!-- res/drawable/coming_soon_badge.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF5722"/> <!-- Material Orange -->
+    <corners android:radius="20dp"/>
+</shape>
