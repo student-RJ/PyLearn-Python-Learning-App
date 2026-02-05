@@ -13,7 +13,7 @@ public class GeminiAPIHelper {
 
     private static final String TAG = "GeminiAPIHelper";
     private static final String GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent";
-    private static final String API_KEY = "AIzaSyD6rJ68fDcmBX9hyTjka9tY4goq4snX1D4"; // Replace with your actual API key
+    private static final String API_KEY = "you APi key"; // Replace with your actual API key
 
     private OkHttpClient client;
     private static Random random = new Random();
